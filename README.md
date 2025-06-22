@@ -165,10 +165,10 @@ This portfolio is a personal project, but I'm always open to feedback and sugges
 
 Found this project interesting? Let's connect!
 
-- 📧 **Email**: hello@21st.dev
-- 💼 **LinkedIn**: [Your LinkedIn Profile]
-- 🐙 **GitHub**: [Your GitHub Profile]  
-- 🐦 **Twitter**: [Your Twitter Profile]
+- 📧 **Email**: sh20raj@gmail.com
+- 💼 **LinkedIn**: [linkedin.com/in/sh20raj](https://linkedin.com/in/sh20raj)
+- 🐙 **GitHub**: [github.com/SH20RAJ](https://github.com/SH20RAJ)  
+- 🌐 **Website**: [shaswat.live](https://shaswat.live)
 
 ## 📝 License
 
