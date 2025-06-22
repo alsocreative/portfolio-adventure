@@ -9,8 +9,11 @@ Welcome to my **Retro 2D Pixel RPG Portfolio**! This unique interactive experien
 - **Room-Based Exploration**: 7 interconnected rooms to discover
 - **Collision Detection**: Realistic wall and object interactions
 - **Interactive NPCs/Objects**: Click or approach objects to learn more
-- **Mini-Map Navigation**: Real-time room tracking with visual map
+- **Enhanced Mini-Map**: Beautiful game-like map with fullscreen mode (Press M)
+- **Smart Keyboard Controls**: Spacebar to both open AND close dialogs
+- **Dynamic Secret Tracking**: Map icons change when secrets are revealed
 - **Sound Effects**: Simulated retro game audio feedback
+- **Custom Pixel Art Favicon**: RPG-themed wizard icon
 
 ### 🗺️ World Map
 ```
@@ -83,15 +86,17 @@ npm run generate-sprites
 
 ### Controls
 - **Movement**: Use ARROW KEYS or WASD to move your wizard character
-- **Interaction**: Walk into objects to trigger dialogues and information
+- **Interaction**: SPACE to interact with objects OR close dialogs
 - **Navigation**: Walk through door openings (gaps in walls) to travel between rooms
-- **Map**: Check the mini-map in the top-right corner to see your location
+- **Map Controls**: Press M to toggle fullscreen map, ESC to close
+- **Dialog Management**: SPACE or ESC to close dialogs
 
 ### Game Objectives
 - 🗺️ **Explore All Rooms**: Visit each of the 7 unique areas
 - 💬 **Read All Content**: Interact with objects to learn about my skills and projects
-- 🥚 **Find Easter Eggs**: Discover 3 hidden secrets throughout the world
+- 🥚 **Find Easter Eggs**: Discover 3 hidden secrets (watch map icons change!)
 - 🎯 **Complete Exploration**: Unlock the "Ultimate Explorer" achievement
+- 🗺️ **Master the Map**: Use M to explore the beautiful fullscreen map
 
 ## 📁 Project Structure
 
@@ -142,6 +147,29 @@ src/
 - **Custom Hooks**: Reusable game logic
 - **Component Composition**: Flexible and maintainable UI architecture
 - **Asset Pipeline**: Support for custom pixel art with Sharp processing
+
+## ✨ Latest Features (v2.0)
+
+### 🗺️ Enhanced Interactive Map
+- **Fullscreen Mode**: Press `M` to open a beautiful, detailed map view
+- **Visual Polish**: Shadows, gradients, and smooth animations
+- **Room Descriptions**: Detailed info about each area
+- **Navigation Guide**: Built-in controls and tips
+
+### ⌨️ Improved Controls
+- **Spacebar Toggle**: Use SPACE to both open and close dialogs
+- **Smart Keyboard Handling**: Context-aware key behaviors
+- **Map Shortcuts**: Quick access with M key, ESC to close
+
+### 🎉 Dynamic Secret System
+- **Changing Icons**: Map icons transform when secrets are discovered
+- **Progressive Revelation**: `❓` → `🎉` → `✨` as you explore
+- **Visual Rewards**: See your progress reflected on the map
+
+### 🧙‍♂️ Enhanced Visuals
+- **Custom Favicon**: Pixel art wizard icon
+- **Better Animations**: Smooth transitions and hover effects
+- **Improved UI**: More polished game-like interface
 
 ## 🏆 Achievements System
 

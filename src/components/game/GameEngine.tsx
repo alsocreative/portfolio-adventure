@@ -8,13 +8,14 @@ import { RoomInfo } from '../ui/RoomInfo';
 import { MiniMap } from '../ui/MiniMap';
 
 export const GameEngine = () => {
-  const { gameState, movePlayer, interact, closeDialog } = useGameState();
+  const { gameState, movePlayer, interact, closeDialog, secretsRevealed } = useGameState();
   
   useKeyboard({
     onMove: movePlayer,
     onInteract: interact,
     onCloseDialog: closeDialog,
-    disabled: gameState.showDialog
+    disabled: false,
+    showDialog: gameState.showDialog
   });
 
   const currentRoom = gameState.rooms[gameState.currentRoom];
@@ -33,7 +34,7 @@ export const GameEngine = () => {
       {/* UI Elements */}
       <RoomInfo roomName={currentRoom.name} />
       <GameControls />
-      <MiniMap gameState={gameState} />
+      <MiniMap gameState={gameState} secretsRevealed={secretsRevealed} />
 
       {/* Dialog */}
       {gameState.showDialog && gameState.currentDialog && (

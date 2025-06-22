@@ -16,6 +16,8 @@ export const useGameState = () => {
     rooms
   });
 
+  const [secretsRevealed, setSecretsRevealed] = useState<string[]>([]);
+
   // Check if position has collision (wall)
   const hasCollision = useCallback((position: Position, roomId: string): boolean => {
     const room = rooms[roomId];
@@ -115,6 +117,17 @@ export const useGameState = () => {
       if (interactable) {
         // Play interaction sound (simulated)
         console.log('💬 Dialog sound!');
+        
+        // Mark secrets as revealed
+        if (interactable.type === 'secret' || interactable.type === 'easter-egg') {
+          setSecretsRevealed(prevSecrets => {
+            if (!prevSecrets.includes(prev.currentRoom)) {
+              return [...prevSecrets, prev.currentRoom];
+            }
+            return prevSecrets;
+          });
+        }
+        
         return {
           ...prev,
           showDialog: true,
@@ -138,6 +151,7 @@ export const useGameState = () => {
     gameState,
     movePlayer,
     interact,
-    closeDialog
+    closeDialog,
+    secretsRevealed
   };
 };

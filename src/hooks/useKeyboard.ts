@@ -17,9 +17,10 @@ interface UseKeyboardProps {
   onInteract: () => void;
   onCloseDialog: () => void;
   disabled?: boolean;
+  showDialog?: boolean;
 }
 
-export const useKeyboard = ({ onMove, onInteract, onCloseDialog, disabled }: UseKeyboardProps) => {
+export const useKeyboard = ({ onMove, onInteract, onCloseDialog, disabled, showDialog }: UseKeyboardProps) => {
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (disabled) return;
     
@@ -28,14 +29,18 @@ export const useKeyboard = ({ onMove, onInteract, onCloseDialog, disabled }: Use
       event.preventDefault();
     }
 
-    if (keyMap[event.code]) {
+    if (keyMap[event.code] && !showDialog) {
       onMove(keyMap[event.code]);
     } else if (event.code === 'Space' || event.code === 'Enter') {
-      onInteract();
+      if (showDialog) {
+        onCloseDialog(); // Close dialog with spacebar
+      } else {
+        onInteract(); // Open dialog/interact
+      }
     } else if (event.code === 'Escape') {
       onCloseDialog();
     }
-  }, [onMove, onInteract, onCloseDialog, disabled]);
+  }, [onMove, onInteract, onCloseDialog, disabled, showDialog]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);

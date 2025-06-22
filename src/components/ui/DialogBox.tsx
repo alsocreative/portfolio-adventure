@@ -46,7 +46,7 @@ export const DialogBox = ({ dialog, onClose }: DialogBoxProps) => {
 
         {/* Instructions */}
         <div className="mt-4 pt-4 border-t border-gray-600 text-xs text-gray-500">
-          Press ESC or click × to close
+          Press ESC or SPACE to close • Click × to close
         </div>
       </div>
     </div>
