@@ -28,7 +28,7 @@ export interface RoomEntrance {
 
 export interface Interactable {
   position: Position;
-  type: 'project' | 'experience' | 'contact' | 'easter-egg';
+  type: 'project' | 'experience' | 'contact' | 'easter-egg' | 'skill' | 'achievement' | 'secret' | 'info' | 'welcome';
   title: string;
   content: string;
   image?: string;

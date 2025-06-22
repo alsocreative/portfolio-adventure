@@ -8,7 +8,7 @@ export const WelcomeScreen = ({ onStart }: WelcomeScreenProps) => {
       <div className="text-center max-w-2xl">
         <div className="mb-8">
           <h1 className="text-4xl md:text-6xl text-white mb-4 leading-tight">
-            🎮 21st.dev RPG
+            🎮 Shade RPG
           </h1>
           <p className="text-lg text-gray-300 mb-2">
             Interactive Portfolio Adventure

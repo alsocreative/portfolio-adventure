@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 interface SpriteProps {
-  type: 'player' | 'wall' | 'door' | 'project' | 'experience' | 'contact' | 'easter-egg' | 'floor';
+  type: 'player' | 'wall' | 'door' | 'project' | 'experience' | 'contact' | 'easter-egg' | 'skill' | 'achievement' | 'secret' | 'info' | 'welcome' | 'floor';
   size?: number;
   className?: string;
   useEmoji?: boolean;
@@ -11,10 +11,15 @@ const emojiMap = {
   player: '🧙‍♂️',
   wall: '🧱',
   door: '🚪',
-  project: '💻',
-  experience: '📋',
+  project: '�',
+  experience: '�',
   contact: '📞',
   'easter-egg': '🌟',
+  skill: '⚔️',
+  achievement: '🏆',
+  secret: '🔮',
+  info: '📜',
+  welcome: '👋',
   floor: ''
 };
 
